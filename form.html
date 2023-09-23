@@ -8,8 +8,8 @@
 <body>
  <div>
    <form>
-    <input type="text" >
-    <input type="password" >
+    <input type="text" value="default value">
+    <input type="password"  id="uniquelement" class="name" placeholder="password" >
 
     <input  type="date">
 
@@ -17,10 +17,11 @@
 
     <input type="file" >
     <span>Male</span>
-    <input type="radio">
+    <input type="radio" name="gender">
     <span>FemMale</span>
+    <input type="radio" name="gender">
 
-    <input type="radio">
+
     <select>
         <option>Go to sleep</option>
         <option>Go to Dance</option>
@@ -33,7 +34,19 @@
 
 
 
+    <button>
+        submit
+    </button>
+
+    <!--Different properties of input attributes
     
+    name ->determines the key while your form is submitted
+    id  --- attibute which is unique in every element -- used for css and js
+    class  --- for applying css or js on the html element ,multiple elements can have the same class
+    value ---the default text you want to give to your field
+    placeholder
+    
+    -->
 
 
 

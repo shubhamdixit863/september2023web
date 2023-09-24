@@ -1,0 +1,88 @@
+
+### Task:
+Create an HTML webpage named "Character Profile" that includes the following elements:
+
+1. **`<html>`, `<head>`, and `<body>` Tags:**
+   - Use to structure your HTML document.
+
+2. **`<title>` Tag:**
+   - Set the title of the webpage as "Character Profile".
+
+3. **`<header>`, `<nav>`, `<section>`, `<article>`, `<aside>`, and `<footer>` Tags:**
+   - Use for semantic structuring of the webpage content.
+
+4. **`<h1>` to `<h6>` Tags:**
+   - Use for headings, with `<h1>` as the main heading "Character Profile" and others for subsections.
+
+5. **`<p>` Tag:**
+   - Use for paragraphs in the "Biography" section.
+
+6. **`<ul>` or `<ol>` Tags:**
+   - Create a list of character’s hobbies or abilities.
+
+7. **`<img>` Tag:**
+   - Insert a fictitious image URL for the character’s photo.
+
+8. **`<a>` Tag:**
+   - Use to create a link to another fictitious character’s profile.
+
+9. **`<table>` Tag:**
+   - Create a table for the character’s stats (like strength, agility, etc.).
+
+10. **`<abbr>` Tag:**
+    - Use for abbreviations in the character’s profile.
+
+11. **`<sub>` and `<sup>` Tags:**
+    - Use for subscript and superscript in any section.
+
+12. **`<blockquote>` Tag:**
+    - Use for a notable quote from the character.
+
+### Example Structure:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Character Profile</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Navigation Links -->
+        </nav>
+    </header>
+    
+    <section>
+        <h1>Character Profile: John Doe</h1>
+        <img src="character-image.jpg" alt="John Doe">
+        <article>
+            <h2>Biography</h2>
+            <p>John Doe was born...</p>
+            <!-- Other Sections -->
+        </article>
+        
+        <aside>
+            <!-- Side Information -->
+        </aside>
+    </section>
+    
+    <footer>
+        <!-- Footer Information -->
+    </footer>
+</body>
+</html>
+```
+
+### Instructions:
+- Use the HTML tags mentioned above.
+- Feel free to add CSS for styling if needed.
+- Replace placeholder comments and content with actual content related to the fictitious character.
+
+
+// You should know what is html
+// you are able to create a html web page
+// you know how to place content horizontally and vertically in the page
+// you should know the difference between block elements and inline elements
+// you should know about the attributes like id ,class ,value ,type(input fields) src 

@@ -4,14 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--
+        if you use box sizing as 
+   box-sizing: border-box;
+   then padding wont affect the height and width of the element and it will be same as provided
+   but 
+   if you are not using this border-box property 
+   then padding will increase the height and width of container element 
+
+   by default the box sizing is content-box which affects the height and width
+
+
+    -->
     <style>
        .outer{
          width: 600px;
          height: 600px;
          background-color: antiquewhite;
          margin-left: 450px;
-         padding: 40px;
-       }
+         padding: 40px; 
+     
+           /** effective height here would be 640px*/
+     
+
+       } 
 
        .inner{
         width: 100px;

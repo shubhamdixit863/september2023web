@@ -1,0 +1,19 @@
+/**
+Three type of selectors you can use to apply css on your html
+1-Tag selector
+2- Id selector
+3- Class selector
+*/
+div{
+    background-color: aquamarine;
+    height: 20px;
+}
+
+.myClass{
+    width: 400px;
+
+}
+
+#myid{
+    border: 7px solid black;
+}

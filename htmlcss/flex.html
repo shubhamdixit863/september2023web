@@ -28,6 +28,17 @@
         flex-direction: column;
                     flex-direction: column-reverse;
 
+                    row: Items are placed the same as the text direction.
+row-reverse: Items are placed opposite to the text direction.
+column: Items are placed top to bottom.
+column-reverse: Items are placed bottom to top.
+
+when flex-diretion is column
+justify content will behave like align-items
+when flex -diretion is  row
+justify content 
+align items will behave in their default way
+
             **/
 
        
@@ -43,14 +54,24 @@
         #div1{
             height: 400px;
             background-color: aqua;
+      
         }
         #div2{
             height: 300px;
             background-color: bisque;
+   
         }
         #div3{
             height: 700px;
             background-color: lightblue;
+          
+        }
+        #div4{
+            height: 700px;
+            background-color: green;
+            order: -1;
+        
+          
         }
 
     </style>
@@ -58,14 +79,22 @@
 <body>
     <div class="flex-container">
         <div id="div1" class="common">
+            1
 
         </div>
         <div id="div2" class="common">
+            2
             
         </div>
         <div id="div3" class="common">
+            3
             
         </div>
+        <div id="div4" class="common">
+            4
+            
+        </div>
+
 
     </div>
     

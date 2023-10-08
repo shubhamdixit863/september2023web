@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #top-right{
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            position: fixed;
+            left: 1100px;
+
+}
+#bottom-left{
+            height: 50px;
+            width: 50px;
+            border: 1px solid black;
+            position: fixed;
+            top: 600px;
+
+}
+#middle{
+    background-color: aliceblue;
+    height: 400px;
+   
+}
+#text{
+    width:200px;
+    height: 200px;
+    border: 1px solid black;
+    position:absolute;
+    left: 560px;
+    top:100px;
+    background-color: brown;
+}
+#parent{
+    height: 800vh;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div id="parent">
+        <div id="top-right">
+
+        </div>
+        <div id="middle">
+            <div id="text">
+                <h1>Hello world</h1>
+
+            </div>
+
+        </div>
+
+        <div id="bottom-left">
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

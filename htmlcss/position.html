@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            height: 5000vh;
+            background-color: crimson;
+
+        }
+        /*
+        #one{
+            height: 50px;
+            background-color: chocolate;
+            position: static;
+            top: 40px;
+            left:40px;
+           
+
+
+        }
+        */
+        /**
+        the only use case of position fixed is that 
+        even when you are scrolling the elment gets fixed at one position 
+        no matter what position you have for your parent element 
+        the fixed position element is always positioned relative to the screen or 
+        html element
+
+        **/
+        /**
+        position sticky is the combination of position static (default one ) and the position fixed
+        the element  will behave as the static position till 
+        either the left ,right bottom or top property mentioned is encountered
+        afterwards it will start behaving like a position fixed
+        **/
+          
+        #one{
+            height: 50px;
+            background-color: chocolate;
+            position: sticky;
+            top: 10px;
+            }
+
+            /**
+            If the position of element  is absolute  ,the space occupied by the 
+            element  is captured by the other element and it seems like it is not the part of
+            the document  or html page 
+            and two conditions arise here 
+            the left ,right ,bottom and top positiopn params get applied 
+            on them from either by the html element if the parent element has a static position
+            or 
+            it gets applied by the parent element if it has the relative position
+ #one{
+            height: 50px;
+            background-color: chocolate;
+            position: absolute;
+            left: 0;
+            top: 0;
+            }
+
+            **/
+        
+        #two{
+          height: 50px;
+            background-color:chartreuse;
+        }
+
+        #three{
+            height: 50px;
+            background-color:cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        Four different positions
+        1- Static position (default position of every element)
+        2- Relative position
+        3-Absoloute Position 
+        4- Fixed position 
+        5- Sticky position
+    -->
+
+    <div id="parent">
+        PARENT
+        <div id="one">
+            ONE
+
+        </div>
+        <div id="two">
+            TWO
+
+        </div>
+        <div id="three">
+            THREE
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

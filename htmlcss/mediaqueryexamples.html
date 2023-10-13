@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale="1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            background-color: green;
+            height: 400px;
+        }
+
+        #div2{
+            background-color: yellowgreen;
+            height: 400px;
+        }
+
+        #div3{
+            background-color: hotpink;
+            height: 400px;
+        }
+   /**
+   The brown color gets applied on all the screen sizes less than or equal to 600 px
+
+   **/
+        @media screen and (max-width:1000px) {
+            #div{
+                background-color: brown;
+
+            }
+            
+        }
+
+        /**
+        The blue color here gets applied to all the screen sizes greater than or equal to the 900px
+        **/
+        @media screen and (min-width:900px) {
+            #div2{
+                background-color: blue;
+
+            }
+            
+        }
+
+        /**
+        If your width is between 600 px and 900 px  
+        then this brown color gets applied 
+
+        and if it is less than 600 px or greater than 900 px then the original 
+        color gets applied or the default value gets applied
+        **/
+        @media screen and (min-width:600px) and  (max-width:900px){
+            #div3{
+                background-color:brown;
+
+            }
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div id="div">
+        1
+
+    </div>
+    <div id="div2">
+        <h1>Div 2</h1>
+
+    </div>
+
+    <div id="div3">
+        <h1>Div 3</h1>
+
+    </div>
+    
+</body>
+</html>

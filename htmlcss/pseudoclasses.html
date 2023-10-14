@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+
+        Css pseudo classes are keywords added to the selector
+        (class ,id or tag selectors)
+        to specify the special state of the selected element
+    1- Interaction pseudo classes
+    :hover
+    :active 
+    :focus
+    2- Form Pseudo classes 
+    :required
+    :valid
+    :invalid
+
+    3- structural pseudo clases
+    :first-child
+    :last-child
+    :nth-child
+
+    4- Extra pseudo classes
+    :root -- for selecting base element or html element
+    :not(selector)
+
+    -->
+    <style>
+        li {
+            color: blueviolet;
+        }
+         .list:hover{
+            color: brown;
+
+        }
+
+        button:active{
+            background-color: brown;
+        }
+
+        input:focus{
+            background-color: blueviolet;
+        }
+
+       
+
+        input:valid{
+            border-color:green ;
+        }
+
+        input:invalid{
+            border-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <ul>
+            <li class="list">Hello world</li>
+            <input type="text">
+            <button>Click Me</button>
+        </ul>
+
+        <form>
+            <input type="text" required>
+            <button type="submit"> Submit the form</button>
+        </form>
+    </div>
+    
+</body>
+</html>

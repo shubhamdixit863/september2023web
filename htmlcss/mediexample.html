@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .images{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        @media screen and (max-width:600px) {
+            .menu{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .images{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .border{
+                border-radius: 50%;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+       <h1>Menu1</h1>
+       <h1>Menu2</h1>
+       <h1>Menu3</h1>
+
+
+
+    </div>
+
+    <div class="images">
+        <div >
+            <img class="border" width="100%" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+
+        </div>
+      
+        <div >
+            <img class="border" width="100%" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+
+        </div>
+        <div >
+            <img class="border"  width="100%" src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+
+        </div>
+ 
+ 
+ 
+     </div>
+    
+</body>
+</html>

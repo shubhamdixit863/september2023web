@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-item{
+            height: 300px;
+            
+        }
+
+        .grid-item-1{
+             background-color: beige;            
+        }
+
+        .grid-item-2{
+             background-color: brown;            
+        }
+
+        .grid-item-3{
+             background-color: lime;            
+        }
+
+
+        .grid-item-4{
+             background-color: black;            
+        }
+
+        .grid-item-5{
+             background-color:blueviolet;            
+        }
+        
+        .grid-item-6{
+             background-color:blanchedalmond;            
+        }
+        
+        .grid-item-7{
+             background-color: hotpink;            
+        }
+        
+        
+
+        .grid-container{
+            display: grid;
+            /*grid-template-columns:1fr 1fr 1fr 1fr 1fr ;*/
+        
+            grid-template-columns:repeat(2,1fr);
+            row-gap: 400px;
+            column-gap: 100px;
+
+           /* grid-template-rows:100px 100px 100px;*/
+           /*grid template rows determine the size of each row*/
+           grid-template-rows:repeat(1,100px);
+           /* grid auto rows will apply the automatic size mentioned
+           to all the rows that are not covered with grid-template-rows*/
+           grid-auto-rows:200px;
+             
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item grid-item-1">
+            <strong>1</strong>
+         <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="">
+        </div>
+        <div class="grid-item grid-item-2">
+            <strong>2</strong>
+
+
+        </div>
+        <div class="grid-item grid-item-3">
+            <strong>3</strong>
+
+
+        </div>
+        <div class="grid-item grid-item-4">
+            <strong>4</strong>
+
+
+        </div>
+
+        <div class="grid-item grid-item-5">
+            <strong>5</strong>
+
+
+        </div>
+
+
+        <div class="grid-item grid-item-6">
+            <strong>6</strong>
+
+        </div>
+
+
+        <div class="grid-item grid-item-1">
+            <strong>7</strong>
+
+
+        </div>
+
+
+        <div class="grid-item grid-item-2">
+            <strong>8</strong>
+
+        </div>
+
+     
+
+
+
+    </div>
+    
+</body>
+</html>

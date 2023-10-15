@@ -29,6 +29,31 @@
 
     -->
     <style>
+
+:root{
+
+--main-bg: #1e272e; /*they are the global variable*/
+
+--main-color: #0097e6;
+
+
+
+}.navbar{
+
+color: #fff;
+
+background-color:  var(--main-bg);  /*you can refere global variables like this*/
+
+/* padding: 1rem 0; */
+
+}
+
+*{
+  /*  background-color: aquamarine;  
+  it targets and selects all the html elements in the documnet
+*/
+}
+        /*
         li {
             color: blueviolet;
         }
@@ -36,6 +61,7 @@
             color: brown;
 
         }
+        */
 
         button:active{
             background-color: brown;
@@ -55,6 +81,28 @@
             border-color: red;
         }
 
+        .container p:first-child{
+            color: red;
+            font-weight: bold;
+        }
+
+        .container .p:last-child{
+            color: greenyellow;
+            font-weight:lighter;
+        }
+
+        .list li:nth-child(odd){
+            color: brown;
+        }
+        :root{
+           margin: 0;
+           padding: 0;
+        }
+
+        .list-container2 li:not(:first-child){
+         background-color: burlywood;
+        }
+
     </style>
 </head>
 <body>
@@ -70,7 +118,67 @@
             <input type="text" required>
             <button type="submit"> Submit the form</button>
         </form>
+
+
+
+
     </div>
     
+    <div class="container">
+        <p class="p">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias recusandae provident fuga earum, unde possimus perferendis aspernatur voluptate quisquam harum, odio saepe, libero et veritatis rem numquam illo id perspiciatis.
+        </p>
+
+        <p class="p">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias recusandae provident fuga earum, unde possimus perferendis aspernatur voluptate quisquam harum, odio saepe, libero et veritatis rem numquam illo id perspiciatis.
+        </p>
+
+        <p class="p">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias recusandae provident fuga earum, unde possimus perferendis aspernatur voluptate quisquam harum, odio saepe, libero et veritatis rem numquam illo id perspiciatis.
+        </p>
+ </div>
+
+ <div class="list-container">
+    <ul class="list">
+        <li>1</li>
+        <li>2</li>
+
+        <li>3</li>
+
+
+        <li>4</li>
+
+        <li>5</li>
+
+        <li>6</li>
+
+        <li>7</li>
+
+        <li>8</li>
+
+        <li>9</li>
+
+        <li>10</li>
+
+        <li>11</li>
+
+    </ul>
+
+ </div>
+ <div>
+    <ul class="list-container2">
+        <li class="important">
+            Item1
+
+        </li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+
+
+    </ul>
+
+ </div>
 </body>
 </html>

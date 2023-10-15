@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--
+
+        px aboslute unit
+        rem root unit it actually gets affected by the root element
+        em is dependent on the parent element
+    -->
+    <style>
+        
+        /**
+        fixed units
+        .container{
+            width:300px; /*fixed width
+            border: 1px solid black; /*fixed border doesnt gets affected by other elements
+            
+            
+
+        }
+        .text{
+            font-size: 16px; /*fixed font size*
+        }
+        */
+
+        :root{
+            font-size: 100px;  
+        }
+
+        /*Relative unit*/
+        .container{
+            font-size: 20px;  /* Base font size*/
+        }
+
+        .text{
+            font-size: 1.5em; /*Relative to the containers font size parent's element's font size
+            
+            em value=target px value/parents font size in px
+            1.5=x/70
+            x=1.5*70=105px
+            1 =16px/yrem
+            yrem
+
+
+            */
+        }
+
+        .text2{
+            font-size: 1.5rem; /*Relative to the root's  font size
+             rem value =target px value /root font size in px
+             1.5 rem =x /100
+             x=1.5*100=150px
+            */
+        }
+
+
+        /**
+        1 vh = 1% of available viewport height 
+        its a relative unit respective to the  view port height that is 
+        available for a screen
+        **/
+        .text{
+            height: 100vh;  /*100 percent of view port height*/
+            background-color: aqua;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="text"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus ipsam, maxime nostrum magni velit quis quod dolores eos, modi ad consequatur labore. Repellat accusantium distinctio assumenda, sed quod dolores!
+
+        </p>
+        <p class="text2"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique repellendus ipsam, maxime nostrum magni velit quis quod dolores eos, modi ad consequatur labore. Repellat accusantium distinctio assumenda, sed quod dolores!
+
+        </p>
+
+        <button class="btn">
+            Click Me
+
+        </button>
+    </div>
+    
+</body>
+</html>

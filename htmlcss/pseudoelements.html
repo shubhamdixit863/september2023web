@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    /**
+    ::before is a pseudo element which inserts text before the
+    text of selected element
+    **/
+        .btn::before{
+            content: "999";
+            margin-right: 4px;
+        }
+        .btn2::after{
+            content: "9909";
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <button class="btn">Download </button>
+        <button class="btn2">Download </button>
+
+    </div>
+    
+</body>
+</html>

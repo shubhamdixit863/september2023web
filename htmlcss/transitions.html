@@ -7,7 +7,7 @@
     <style>
         .button{
             background-color: red;
-            transition: width 3s 2s ease-in,background-color 4s ease ,height 3s cubic-bezier(0.17,0.07,0.83,0.67);
+            transition: padding 4s , width 3s 2s ease-in,background-color 4s ease ,height 3s cubic-bezier(0.17,0.07,0.83,0.67);
             /**
             transition: property timeinterval timingdelay timingfunctions
 
@@ -24,12 +24,14 @@
             width: 300px;
             height: 300px;
         }
-
+      
         .button:hover{
             background-color: green;
             width: 600px;
             height: 500px;
+            padding: 40px;
         }
+  
     </style>
     <!--
 
@@ -39,9 +41,13 @@
 </head>
 <body>
 
-    <button class="button" >
+    <div class="button" >
         Click Me
-    </button>
+        <strong id="text">
+           Hello People
+        </strong>
+
+    </div>
     
 </body>
 </html>

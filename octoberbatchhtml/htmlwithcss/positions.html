@@ -8,13 +8,15 @@
     <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
     <style>
         .parent{
-            height: 400px;
+            height: 1400vh;
             background-color: brown;
             position: relative;
+       
         }
         .common{
             height: 100px;
             border: 1px solid black;
+          
 
         }
 
@@ -32,9 +34,19 @@
             are taken into account from the nearest relative ,absolute or
              fixed positions parent
              otherwise  they take the value from the html element
+
+             Position fixed will make the element fixed at one position 
+             even if the page is scrollled down
+
+             Position sticky is the combination 
+             of position relative and position fixed
+             if the page is not scrolled
+             it will behave like a relative position 
+             and as soon as you scroll the page it becomes
+             position fixed
             **/
             background-color: greenyellow;
-            position: absolute;
+            position: sticky;
            top: 0px;
             
 

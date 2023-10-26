@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="positions.css">
+    <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196">
+    <style>
+        .parent{
+            height: 400px;
+            background-color: brown;
+            position: relative;
+        }
+        .common{
+            height: 100px;
+            border: 1px solid black;
+
+        }
+
+        .div1{
+            /**
+            position relative is similar to position static 
+            but you have freedom to move your element
+            by using the top left right or bottom property
+            whenever you are applying position absolute 
+            other elements consider the element on which
+            the position absolute has been applied 
+            to be completely removed from the html structure
+
+            the top left and bottom properties value
+            are taken into account from the nearest relative ,absolute or
+             fixed positions parent
+             otherwise  they take the value from the html element
+            **/
+            background-color: greenyellow;
+            position: absolute;
+           top: 0px;
+            
+
+        }
+
+        .div2{
+            background-color:blueviolet;
+   
+        }
+        .div3{
+            background-color: palevioletred;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        By default when the page loads and no positon property is applied
+        the position is static ie the elements are positioned the way you have written
+        in your html file 
+        relative 
+        absolute 
+        fixed
+        sticky
+    -->
+    <div class="parent">
+        <div class="div1 common">
+          DIV1
+        </div>
+        <div class="div2 common">
+            DIV2
+
+        </div>
+
+        <div class="div3 common">
+            DIV3
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

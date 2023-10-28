@@ -12,10 +12,28 @@
             transition:all 2s cubic-bezier(0.1, 0.7, 1.0, 0.1) ; /*transition: property_name duration function*/
             /* ease in ,ease out ,liner ,ease ,*/
         }
+        button{
+            width: 100px;
+            background-color: aqua;
+            transition:all 2s cubic-bezier(0.1, 0.7, 1.0, 0.1) ; /*transition: property_name duration function*/
+
+        }
 
         .main:hover{
             background-color: blue;
             width: 400px;
+        }
+        button:active{
+            background-color: brown;
+            width: 200px;
+        }
+        .input{
+            transition:all 4s ease-in ; /*transition: property_name duration function*/
+
+        }
+        .input:focus{
+            background-color: green;
+            width: 700px;
         }
     </style>
 </head>
@@ -23,6 +41,12 @@
     <div class="main">
 
     </div>
+
+    <button>
+        Submit
+    </button>
+
+    <input type="text" class="input">
     
 </body>
 </html>

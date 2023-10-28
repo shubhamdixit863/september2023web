@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            background-color: blanchedalmond;
+            height: 300px;
+            display: flex;
+          justify-content:space-evenly;
+         
+        }
+
+        .flex-item{
+            height:200px ;
+            border: 1px solid black;
+            width: 200px;
+            background-color: greenyellow;
+
+        }
+
+        /**
+          @media mediat-type and (feature){
+            // rules on the elements
+          }
+
+          max-width:500px
+          if the screen size is between 0px and 500px 
+          the color should be green of the div
+        **/
+
+        /**
+        Media queries helps us apply some css rules on the html elements
+        dependig on the screen size
+        **/
+        @media screen and (max-width:500px){ 
+
+            .div{
+                background-color: green;
+            }
+          }
+
+          @media screen and (max-width:500px){
+            .div{
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-between;
+                
+            } 
+            .flex-item{
+                margin: 30px;
+            }
+
+
+} 
+
+    </style>
+</head>
+<body>
+    <div class="div">
+
+        <div class="flex-item">
+            One
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente earum, modi aliquid nam eligendi dolore sit tenetur accusantium nulla, cupiditate, ea saepe illum alias reprehenderit nisi laudantium esse sint placeat!
+            </p>
+         
+
+        </div>
+        <div class="flex-item">
+            Two
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente earum, modi aliquid nam eligendi dolore sit tenetur accusantium nulla, cupiditate, ea saepe illum alias reprehenderit nisi laudantium esse sint placeat!
+            </p>
+
+        </div>
+        <div class="flex-item">
+            Three
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente earum, modi aliquid nam eligendi dolore sit tenetur accusantium nulla, cupiditate, ea saepe illum alias reprehenderit nisi laudantium esse sint placeat!
+            </p>
+
+        </div>
+        <div class="flex-item">
+            Four
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente earum, modi aliquid nam eligendi dolore sit tenetur accusantium nulla, cupiditate, ea saepe illum alias reprehenderit nisi laudantium esse sint placeat!
+            </p>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

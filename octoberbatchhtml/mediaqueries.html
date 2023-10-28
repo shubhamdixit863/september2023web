@@ -41,20 +41,45 @@
                 background-color: green;
             }
           }
-
-          @media screen and (max-width:500px){
+          /**
+          max-width :500px means 0 to 500px or 500px or less
+          **/
+/*
+          @media screen and (max-width:500px){ 
             .div{
                 align-items: center;
                 flex-direction: column;
                 justify-content: space-between;
+               
                 
             } 
             .flex-item{
                 margin: 30px;
+                border-radius: 50%;
             }
 
 
 } 
+*/
+
+/**
+As soon as i go less than 600 px in screen size
+this rule would be removed
+or 
+
+this rule is applicable for all the sizes >= 600px
+600 ,800,900,100000
+it wont be applicable for 
+less than 600 px ie 599 ,78 ,0px
+**/
+@media screen and (min-width:600px){ 
+           .div{
+            background-color: brown;
+           }
+
+
+} 
+
 
     </style>
 </head>

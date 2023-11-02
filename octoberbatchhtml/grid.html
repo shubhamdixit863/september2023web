@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: grey;
+        
+        }
+
+        .grid-item{
+            background-color: violet;
+            border: 1px solid black;
+        }
+        .grid-container{
+            display: grid;
+            /*grid-template-columns: 200px 200px 200px 200px 200px;*/
+            grid-template-columns:1fr 1fr 1fr 1fr;
+            
+            /*grid-template-rows: 500px 500px;*/
+            /*if the content is there then it will take the height of the content 
+            otherwise it will take the 150 px size
+               grid-auto-rows: minmax(150px,auto);
+            */
+            grid-auto-rows: minmax(150px,auto);
+           /* grid-template-columns:repeat(5,200px)*/
+
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <img height="300px" width="750px" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D" alt="">
+
+        </div>
+
+        <div class="grid-item">
+            
+        </div>
+        <div class="grid-item">
+            
+        </div>
+        <div class="grid-item">
+            
+        </div>
+
+        <div class="grid-item">
+            
+        </div>
+
+
+        <div class="grid-item">
+
+        </div>
+
+        <div class="grid-item">
+            
+        </div>
+        <div class="grid-item">
+            
+        </div>
+        <div class="grid-item">
+            
+        </div>
+
+        <div class="grid-item">
+            
+        </div>
+
+    </div>
+    
+</body>
+</html>

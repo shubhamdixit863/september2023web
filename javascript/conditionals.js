@@ -24,11 +24,11 @@ function CheckIfItsNumber2Or3(num){
 
     }else{
         console.log("Num is neither 2 nor 3 ");
-
+    
     }
 
 }
-
+// I am calling the function
 CheckIfItsNumber2Or3(2);
 CheckIfItsNumber2Or3(3);
 CheckIfItsNumber2Or3(30);
@@ -41,3 +41,21 @@ console.log(41==51);  // false
 console.log(1==1);
 
 
+// Write a function that takes string argument ,if the string is A print Apple ,if string is B ,print
+// banana ,if string is C print cat ,otherwise print I dont know
+// Anything inside  ---> "c" ,'c' -->string
+
+function CheckString(value){
+    if (value=='A'){  // --> A == A -->true
+        console.log("Apple")
+    }else if(value=="B"){
+        console.log("Banana")
+    }else if(value=="C"){
+        console.log("Cat")
+    }else{
+       console.log("I dont know");
+    }
+
+}
+//let A="A";
+//CheckString("A");

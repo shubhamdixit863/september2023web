@@ -122,6 +122,37 @@ function Subtract(){
     let b=10;
     let difference=b-a;
     console.log(difference)
+    // there is a hidden return statement automatically added by a compiler ,it returns undefined
+    // by default function returns undefined
  }
 
  Subtract();
+
+ // function parameters and returns values
+ function Sum(a,b){ //parameters are variables that you put in definition
+   
+    let sum=a+b;
+    console.log(sum) // prints to the browser console
+ }
+ console.log("heyyyy----",Sum(8,9))
+
+// When we call the function then only the instructions inside the function gets executed
+Sum(23,7); // 23,7 are known as arguments
+ Sum(23,70);  // 23 ,70 are arguments ,arguments are values ---->
+ //let age=prompt("Please enter your age");
+ //console.log("Users age",age)
+
+ // Return statement
+
+ function SumReturn(a,b){ //parameters are variables that you put in definition
+   
+    let sum=a+b;
+    return sum; // should be the last statement ,and once return statement there function executio stop
+
+///  --->no further code is executed
+}
+
+ let sumReturned=SumReturn(7,9);
+ console.log("Returned sum is",sumReturned);
+
+ console.log("Returned sum is", SumReturn(70,9));

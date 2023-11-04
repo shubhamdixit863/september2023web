@@ -5,7 +5,7 @@
 // Syntax ---> keyword variableName =value to be stored
 //shantanu 10000 , 10% interest per year ,i want to calc interest -shubham
 // variable name can be problem specific
-
+let uuuu=0; // global varaible
 /*
 var borrower="Shantanu"; // what this line means -- is  to store shantanu string in borrower variable
 var lender="Shubham";
@@ -152,7 +152,21 @@ Sum(23,7); // 23,7 are known as arguments
 ///  --->no further code is executed
 }
 
- let sumReturned=SumReturn(7,9);
+ let sumReturned=SumReturn(7,9);  // we are storing the value returned from SumReturn() into a variable
+ Sum(23,7);
  console.log("Returned sum is",sumReturned);
 
  console.log("Returned sum is", SumReturn(70,9));
+ //alert(SumReturn(70,9))
+
+ function foo(){
+
+    function bar(){
+         return "hello";
+    }
+   const c= bar();
+   return c;
+
+ }
+
+ console.log(foo())

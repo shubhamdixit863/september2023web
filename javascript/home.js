@@ -103,3 +103,25 @@ CalulateInterest();
 
 // Function are used to encapsulate the problem logic in an isolated environment
 
+
+// Write a function the prints out the sum of two numbers
+
+// function definition
+function Sum(){
+   let a=9;
+   let b=10;
+   let sum=a+b;
+   console.log(sum) // prints to the browser console
+}
+
+Sum() ; // function call 
+// Write a function the prints out the difference o of two numbers
+
+function Subtract(){
+    let a=9;
+    let b=10;
+    let difference=b-a;
+    console.log(difference)
+ }
+
+ Subtract();

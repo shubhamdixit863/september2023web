@@ -45,17 +45,46 @@ console.log(1==1);
 // banana ,if string is C print cat ,otherwise print I dont know
 // Anything inside  ---> "c" ,'c' -->string
 
-function CheckString(value){
-    if (value=='A'){  // --> A == A -->true
+function CheckString(value){ // paramaters are variable in itself
+    if (value=="A"){  // --> A == A -->true
         console.log("Apple")
     }else if(value=="B"){
         console.log("Banana")
     }else if(value=="C"){
         console.log("Cat")
     }else{
-       console.log("I dont know");
+       console.log("I don't know");
     }
 
 }
 //let A="A";
 //CheckString("A");
+
+// modulus operator  % --->modulus operator gives you remainder
+// divide 5 by 2 -->what will be the remainder
+
+console.log("Remainder",5%2);
+console.log("Remainder",89%7);
+
+// what is an even number --->remainder 0 
+console.log((4%2==0));  // a number is even or not
+
+function checkEvenOROdd(num){
+    if(num%2==0){
+        console.log("Its even")
+    }else{
+        console.log("its odd")
+    }
+
+}
+
+checkEvenOROdd(89);
+
+// Fizzz buzz problem 
+
+// You have to create a function ,that takes a number  as an argument
+
+// if the number is completely divisible by 3 you should print fizz
+// if the number is completely divisble by 5 you should print buzz
+// otherwise print fizzbuzz
+

@@ -118,11 +118,11 @@ return isPrime;
 
     }
  }
- let j=1;
- while(j<=100){
+ let j=1;  // this happens only once
+ while(j<=100){  // this happens multiple times
     if(j%2==1){
         console.log("Printing from while loop",j);
    
        }
-    j++
+    j++  // multiple times
  }

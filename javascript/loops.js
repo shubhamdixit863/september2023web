@@ -110,3 +110,19 @@ for( i=1;i<=100;i++){  // i++ -->post increment --> // pre increment ++i
 
 return isPrime;
  }
+
+// This loop is printing all the even numbers
+ for( let i=1;i<=100;i++){  // i++ -->post increment --> // pre increment ++i
+    if(i%2==1){
+     console.log(i);
+
+    }
+ }
+ let j=1;
+ while(j<=100){
+    if(j%2==1){
+        console.log("Printing from while loop",j);
+   
+       }
+    j++
+ }

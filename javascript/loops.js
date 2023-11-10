@@ -135,9 +135,9 @@ for( let i=1;i<=100;i++){  // i++ -->post increment --> // pre increment ++i
 
  // Default paramters
 
- function bar(num=89){  // default args
+ function bar(num="hello"){  // default args
     console.log("Nummm---",num)
  }
- bar(78);
+ bar();
 
  // default values are used when you dont pass any args in the function 

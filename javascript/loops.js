@@ -93,4 +93,20 @@ for( i=1;i<=100;i++){  // i++ -->post increment --> // pre increment ++i
 
  // i++  --->evaluation part (incrementing part) // after the logic is executed then the incrementing part happens
 
+ // You have to print all prime numbers between 1 to 100
+ // Write a function that prints all the prime numbers between 1 to 100
+ // A prime number is the number that is completely divisble by itself or 1 
+
  
+ function CheckPrime(num){
+    let isPrime=true;
+    for(let i=2;i<num;i++){
+        if(num%i==0){
+            // this condition should not executed
+            isPrime=false;
+        }
+
+    }
+
+return isPrime;
+ }

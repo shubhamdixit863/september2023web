@@ -111,8 +111,12 @@ for( i=1;i<=100;i++){  // i++ -->post increment --> // pre increment ++i
 return isPrime;
  }
 
+
+
+
+ function foo(){
 // This loop is printing all the even numbers
- for( let i=1;i<=100;i++){  // i++ -->post increment --> // pre increment ++i
+for( let i=1;i<=100;i++){  // i++ -->post increment --> // pre increment ++i
     if(i%2==1){
      console.log(i);
 
@@ -126,3 +130,14 @@ return isPrime;
        }
     j++  // multiple times
  }
+ }
+
+
+ // Default paramters
+
+ function bar(num=89){  // default args
+    console.log("Nummm---",num)
+ }
+ bar(78);
+
+ // default values are used when you dont pass any args in the function 

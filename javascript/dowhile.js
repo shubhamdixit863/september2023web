@@ -88,3 +88,43 @@ continueloop()
 
 // Write a function that checks for the prime number between 151 to 261 and it breaks when the first prime number is
 // encountered
+
+function Printeven(){
+    for(let i=1;i<=50;i++){
+        if(i%2==1){
+            continue;
+        }
+
+        console.log("Its even",i)
+    }
+
+}
+
+Printeven()
+
+function CheckPrime(num){ // num=13
+
+    if (num==1){
+      return false;
+    }
+    for(let i=2;i<num;i++){
+      if(num%i==0){
+        // there exists an i  that completely divides num
+        return false; // so whenever or whereever the return statement is encountered the function will stop executing
+        }
+      }
+  return true;
+    // returns a boolean value
+  }
+
+  function PrintNumbers(){
+    for(let i=150;i<261;i++){
+
+        if(CheckPrime(i)){
+            console.log(i)
+            break;
+        }
+
+    }
+  }
+  PrintNumbers();

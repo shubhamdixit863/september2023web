@@ -19,16 +19,20 @@
 // How we select the element from the dom object
 //there are 4 ways of selecting elements
 // 1- selecting by id  
-// 2- selecting by class  
+// 2- selecting by class 
 // 3- selecting by tag 
 // 4- selecting by query 
 
 // Selecting by id // will select only one element (or first element from top if you wrongly added multiple elements with same id) 
-let element=document.getElementById("heading")  // selecting the element
+let element=document.getElementById("heading");  // selecting the element
+let element2=document.getElementById("demo");  // selecting the element
+
+
 // Once we have the element we can change its properties 
 //style -- css 
+
 element.style.color="brown";
 // text -- innerText
 element.innerText="Do it Now !!"
 // html -- innerHTML
-element.innerHTML="<span>Hey there !!!</span>"  // Difference between innerHTML and innerText 
+element.innerHTML="<span>Hey there !!!</span>"  // Difference between innerHTML and innerText  and textContent

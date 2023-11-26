@@ -36,3 +36,9 @@ element.style.color="brown";
 element.innerText="Do it Now !!"
 // html -- innerHTML
 element.innerHTML="<span>Hey there !!!</span>"  // Difference between innerHTML and innerText  and textContent
+
+
+let mydivElement=document.getElementById("mydiv");
+console.log(mydivElement.innerHTML);  // will get you the html 
+console.log(mydivElement.innerText);  // will get you the text data only ,it wont return you the white space
+console.log(mydivElement.textContent);  // will get you the text data along with the whitespaces as well if they exist

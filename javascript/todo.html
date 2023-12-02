@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="input"/>
+    <button id="btn">
+        Add To Do
+    </button>
+
+    <ul id="list">
+
+    </ul>
+
+
+    <script>
+
+        const btn=document.getElementById("btn");
+        const input=document.getElementById("input");
+        const list=document.getElementById("list");
+
+
+      btn.addEventListener("click",function(){
+      const value=input.value;
+      list.innerHTML=list.innerHTML+"<li>"+value +" <button>Delete</button> </li>"
+      })
+
+      // todays session we will see about template literals
+
+    </script>
+    
+</body>
+</html>

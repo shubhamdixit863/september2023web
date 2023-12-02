@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border:1px solid black ;height:300px;width:200px">
+
+        <input type="number"  id="one"  placeholder="enter first number">
+
+        <input type="number" id="two" >
+
+        <input type="number" id="output"  readonly>
+
+        <button id="add">
+            Add
+        </button>
+
+
+        <button id="subtract">
+            
+            Subtract
+        </button>
+
+
+        <button id="multiply">
+            Multiply
+        </button>
+
+        <button id="division">
+            Division
+        </button>
+
+        <button id="modulus">
+            Modulus
+        </button>
+       
+    </div>
+    <script>
+
+        let add=document.getElementById("add");
+        let subtract=document.getElementById("subtract");
+       
+
+        let multiply=document.getElementById("multiply");
+        let one=document.getElementById("one");
+        let two=document.getElementById("two");
+        let output=document.getElementById("output");
+
+
+
+        add.addEventListener("click",function(){
+             let onevalue=one.value;
+             let twovalue=two.value;
+
+             // parseInt(1,2,3,) ,parseFloat  (7.9,8.9)
+             let sum=Number(onevalue)+Number(twovalue);
+             output.value=sum;
+
+        })
+
+        multiply.addEventListener("click",function(){
+            let onevalue=one.value;
+             let twovalue=two.value;
+
+             // parseInt(1,2,3,) ,parseFloat  (7.9,8.9)
+             let product=Number(onevalue)*Number(twovalue);
+             output.value=product;
+            
+        })
+        subtract.addEventListener("click",function(){
+            let onevalue=one.value;
+             let twovalue=two.value;
+
+             // parseInt(1,2,3,) ,parseFloat  (7.9,8.9)
+             let difference=Number(onevalue)-Number(twovalue);
+             output.value=difference;
+        })
+
+
+    </script>
+    
+</body>
+</html>

@@ -26,10 +26,13 @@
 
       btn.addEventListener("click",function(){
       const value=input.value;
-      list.innerHTML=list.innerHTML+"<li>"+value +" <button>Delete</button> </li>"
+    //  list.innerHTML=list.innerHTML+"<li>"+value +" <button>Delete</button> </li>"
+    // tenplate literals 2 <li><
+    list.innerHTML=`${list.innerHTML} <li> ${value} <button>Delete</button> </li> `
       })
 
       // todays session we will see about template literals
+      // We can use template literals
 
     </script>
     

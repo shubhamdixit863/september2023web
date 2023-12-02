@@ -44,10 +44,18 @@ document.getElementById("btn2").addEventListener("click",function(){
 
 
 const btns=document.getElementsByClassName("btn");
+/*
+const btnsArray=[...btns]
+btnsArray.forEach(()=>{
 
+})
+*/
 for(let i=0;i<btns.length;i++){
     btns[i].addEventListener("click",function(event){
+        console.log(event.target);
         console.log("button clicked",event.target.innerText);
+        document.getElementById("input").value=document.getElementById("input").value+event.target.innerText
+       // event.target.innerText=8
     })
 }
 
@@ -55,3 +63,22 @@ for(let i=0;i<btns.length;i++){
 
 // And create an input field when the button gets clicked show the button text as value on 
 // the inputfield
+
+
+//querySelctor and querySelctorAll
+//querySelector as getElementById
+// in query selctor you can pass classname ,id and tag and other complex selectors
+// it will always return single or one elemenys
+document.querySelector("#something").addEventListener("click",function(){
+    alert("click happened");
+})
+
+// for class
+document.querySelector(".btnclass").addEventListener("click",function(){
+    alert("click of class button happened");
+})
+
+// for tag
+document.querySelector("h1").addEventListener("click",function(){
+    alert("click of heading happend");
+})

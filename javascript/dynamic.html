@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .myclass{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <input type="text" id="input">
+
+    <button id="btn">
+        Click Me
+    </button>
+
+    <ul id="list">
+
+    </ul>
+
+    <script>
+        const list=document.getElementById("list");
+        const input=document.getElementById("input");
+        document.getElementById("btn").addEventListener("click",(event)=>{
+            // it will create new html element
+            const li=document.createElement("li");
+            const btn=document.createElement("button");
+            btn.innerText=`${input.value} Delete Me`
+            btn.addEventListener("click",(event)=>{
+               list.removeChild(event.target.closest("li"));
+              
+            })
+            li.append(btn);
+           
+           
+            li.className="myclass"
+            list.appendChild(li); // it adds the child elements to the list
+            
+
+
+        })
+    </script>
+    
+</body>
+</html>

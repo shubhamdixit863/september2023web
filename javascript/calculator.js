@@ -7,6 +7,7 @@ window.onload = (event) => {
   // Arrow functions ,template literals
 
 window.addEventListener("load",function(){
+
     let add=document.getElementById("add");
     let subtract=document.getElementById("subtract");
     
@@ -24,10 +25,12 @@ window.addEventListener("load",function(){
     add.addEventListener("click",function(){
          let onevalue=one.value;
          let twovalue=two.value;
-    
+         debugger;
+
          // parseInt(1,2,3,) ,parseFloat  (7.9,8.9)
          let sum=Number(onevalue)+Number(twovalue);
          output.value=sum;
+         debugger;
     
     })
     

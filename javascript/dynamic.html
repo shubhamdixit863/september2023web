@@ -23,26 +23,56 @@
 
     </ul>
 
+<h1 id="heading">HEading</h1>
+    <button id="btn2">
+        Click Me
+    </button>
+
     <script>
         const list=document.getElementById("list");
         const input=document.getElementById("input");
         document.getElementById("btn").addEventListener("click",(event)=>{
+            //element.innerHTML="<li></li>"
             // it will create new html element
             const li=document.createElement("li");
             const btn=document.createElement("button");
-            btn.innerText=`${input.value} Delete Me`
+            const btnEdit=document.createElement("button");
+
+            btn.innerText=` Delete Me`
+            btnEdit.innerText=`Edit Me`
             btn.addEventListener("click",(event)=>{
-               list.removeChild(event.target.closest("li"));
+                console.log(event.target); // event target is the element on which the user has interacted
+                // remove child will remove the li element from the list
+               list.removeChild(event.target.closest("li"));  // it will return the parent or any of the neigbouring 
+               
+               // closes is a method that gives your the nearest element mentioned
               
             })
-            li.append(btn);
+
+            btnEdit.addEventListener("click",(event)=>{
+                console.log(event.target); // event target is the element on which the user has interacted
+             
+                ///   make the heading replace with the input field with the value as text
+                // simultaneously replace the edit button with save button  with another event listener
+                 // once the save button is clicked ,replace the text and remove all the setps above
+           
+            })
+           // li.append(btn);
+            li.append(input.value,btn) // with append you can add an element along with text
+            li.append(btnEdit);
            
            
             li.className="myclass"
-            list.appendChild(li); // it adds the child elements to the list
+            list.appendChild(li); // it adds the child elements to the list ,you can only append the elements
             
 
 
+        })
+
+        document.getElementById("btn2").addEventListener("click",function(){
+            
+          document.body.removeChild(document.getElementById("heading"))  
+            
         })
     </script>
     

@@ -23,3 +23,4 @@ document.getElementById("btn").addEventListener("click",function(){
 
 // event bubbling is the process that happens in the browser automatically in which any dom event bubbles up to the parent elements
 // event delegation is the process in which instead of listening for the events on the child elements we listen for the events on parent elemnent
+

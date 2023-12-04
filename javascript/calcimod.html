@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #total {
+            border: 2px solid black;
+            text-align: center;
+            width: auto;
+            width: 500px;
+            margin-left: 400px;
+            display: grid;
+            height: 500px;
+        }
+
+        #input {
+            margin-top: 10px;
+            grid-template-columns: repeat(1, auto);
+            display: grid;
+            color: red;
+
+        }
+
+        #number {
+            display: grid;
+            margin-top: 10px;
+            grid-template-columns: repeat(3, auto);
+
+        }
+
+        #operators {
+            margin-top: 10px;
+            grid-template-columns: repeat(4, auto);
+            display: grid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="total">
+        <div id="input">
+            1st Number:- <input type="text" id="first" readonly placeholder="1st number">
+            2nd Number:-<input type="text" id="second" readonly placeholder="2nd number">
+            Result:-<input type="text" id="result" readonly placeholder="Result">
+        </div>
+        <div id="number">
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+        </div>
+
+        <div id="operators">
+            <button id="add">add</button>
+            <button id="subs">subtract</button>
+            <button id="div"> Divide</button>
+            <button id="multiply">multiply</button>
+
+        </div>
+        <button id="second_number">click here to enter second number</button>
+        <button id="clear">Clear All</button>
+
+    </div>
+    <script>
+        let first = document.getElementById('first');
+        let second = document.getElementById('second');
+        let result = document.getElementById('result');
+        let btn = document.getElementsByClassName('btn');
+        let second_number = document.getElementById('second_number');
+        let add = document.getElementById('add');
+        let subs = document.getElementById('subs');
+        let divide = document.getElementById('div');
+        let multiply = document.getElementById('multiply');
+        let clear = document.getElementById('clear')
+
+        let display1 = "";
+        let display2 = "";
+        const listener=function (event) {
+                display1 = display1 + event.target.innerText;
+                first.value = display1;
+            }
+
+            const listener2=function (event) {
+                    display2 = display2 + event.target.innerText;
+                    second.value = display2;
+                }
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].addEventListener('click',listener );
+        }
+
+       
+        second_number.addEventListener('click', function () {
+            for (let i = 0; i < btn.length; i++) {
+            btn[i].removeEventListener("click",listener,{ passive: true });
+        }
+
+            for (let i = 0; i < btn.length; i++) {
+                btn[i].addEventListener('click', listener2);
+            }
+        });
+
+        add.addEventListener('click', function () {
+            let addedValue = parseInt(display1) + parseInt(display2);
+            result.value = addedValue;
+            document.getElementById('result').style.color = "blue"
+        });
+
+        subs.addEventListener('click', function () {
+            let subtractedValue = parseInt(display1) - parseInt(display2);
+            result.value = subtractedValue;
+            document.getElementById('result').style.color = "blue"
+        });
+
+        divide.addEventListener('click', function () {
+            let dividedValue = parseInt(display1) / parseInt(display2);
+            result.value = dividedValue;
+            document.getElementById('result').style.color = "blue"
+        });
+
+        multiply.addEventListener('click', function () {
+            let multipliedValue = parseInt(display1) * parseInt(display2);
+            result.value = multipliedValue;
+            document.getElementById('result').style.color = "blue"
+        });
+        clear.addEventListener('click', function () {
+
+
+            for (let i = 0; i < btn.length; i++) {
+            btn[i].removeEventListener("click",listener2,{ passive: true });
+        }
+
+        for (let i = 0; i < btn.length; i++) {
+                btn[i].addEventListener('click', listener);
+            }
+            
+            first.value = "";
+            second.value = "";
+            result.value = "";
+            display1 = "";
+            display2 = "";
+
+        })
+    </script>
+</body>
+
+</html>

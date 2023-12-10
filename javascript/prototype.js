@@ -64,8 +64,20 @@ const obj1=new Object();  // Object is a keyword
 
  }
 
+  // Constructor function methods
+  Human2.prototype.getName=function(){
+    return this.name;
+   }
+  
  const obj5=new Human2("j","2");
+ const obj6=new Human2("jongi","2");
+
  console.log(obj5);
+ console.log("Name---",obj5.getName())
+ console.log("Name---",obj6.getName())
+
+
+
 
 
  // 4 -Using classes
@@ -104,10 +116,14 @@ const obj1=new Object();  // Object is a keyword
 
   }
 
+  getFeathers(){
+    return this.feathers;
+  }
+
  }
 
- const eagle=new Bird();
- console.log(eagle);
+ const eagle=new Bird(9);
+ console.log("feathers",eagle.getFeathers());
 /*
  class LandBird extends Bird{
   constructor(legs,feathers){
@@ -137,3 +153,47 @@ const obj1=new Object();  // Object is a keyword
  console.log(new C());
 
  //[9,9,0]  [Htmlcollection] [<div>]
+
+ /**
+  * 
+  * 
+  * 
+### Problem Statement: "Library Management System"
+
+#### Objective:
+Create a simple Library Management System using JavaScript classes and prototypes.
+The system should be able to handle books and users, allowing for basic operations 
+like adding new books, registering users, and checking books in and out.
+
+#### Requirements:
+
+1. **Book Class:**
+   - Attributes: `title`, `author`, `ISBN`, `isAvailable`.
+   - Methods:
+     - A method to toggle the `isAvailable` status (i.e., when a book is checked out or returned).
+
+2. **User Class:**
+   - Attributes: `name`, `userID`, `booksCheckedOut`.
+   - Methods:
+     - `checkOutBook(book)`: Should add a book to the user's `booksCheckedOut` list and update the book's `isAvailable` status.
+     - `returnBook(book)`: Should remove the book from the user's `booksCheckedOut` list and update the book's `isAvailable` status.
+
+3. **Library Class:**
+   - Attributes: `books` (an array of `Book` instances), `users` (an array of `User` instances).
+   - Methods:
+     - `addBook(book)`: Add a new book to the library.
+     - `registerUser(user)`: Add a new user to the library.
+     - `findBookByISBN(ISBN)`: Find and return a book by its ISBN.
+     - `findUserByID(userID)`: Find and return a user by their userID.
+
+#### Additional Challenges:
+
+- Implement error handling. For example, prevent checking out a book that is not available or returning a book that wasn't checked out.
+- Add a method to the Library class to display all available books.
+- Implement a prototype method for the Book class that returns a string representation of the book details.
+
+
+
+
+  * 
+  */

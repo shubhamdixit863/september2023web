@@ -66,3 +66,74 @@ const obj1=new Object();  // Object is a keyword
 
  const obj5=new Human2("j","2");
  console.log(obj5);
+
+
+ // 4 -Using classes
+
+ class Animal2{
+  
+  constructor(legs,arms){
+    this.legs=legs;
+    this.arms=arms;
+
+  }
+
+  
+ }
+
+ const elephant=new Animal2(4,0);
+ console.log(elephant);
+
+
+ // with classes we can do inheritance
+
+ class Mammal{
+
+ }
+
+ // when you dont have extends keyword in the class you donot need to call the super
+ // because in such cases your Mamal objects will directly reference the God object
+
+ const m=new Mammal();  // it will call the default constructor
+ console.log(m);
+
+ class Bird extends Mammal{
+  constructor(feathers){
+    super(); // it calls the parent class constructor
+    this.feathers=feathers;
+
+  }
+
+ }
+
+ const eagle=new Bird();
+ console.log(eagle);
+/*
+ class LandBird extends Bird{
+  constructor(legs,feathers){
+    super(feathers);
+    this.legs=legs;
+
+  }
+
+ }
+ const penguin=new LandBird(2,2);
+ console.log(penguin);
+ */
+
+
+ class A{
+
+ }
+
+ class B extends A{
+
+ }
+
+ class C extends B{
+
+ }
+
+ console.log(new C());
+
+ //[9,9,0]  [Htmlcollection] [<div>]

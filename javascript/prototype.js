@@ -177,8 +177,18 @@ like adding new books, registering users, and checking books in and out.
    - Attributes: `name`, `userID`, `booksCheckedOut`.
    - Methods:
      - `checkOutBook(book)`: Should add a book to the user's `booksCheckedOut` list and update the book's `isAvailable` status.
+ 
      - `returnBook(book)`: Should remove the book from the user's `booksCheckedOut` list and update the book's `isAvailable` status.
+class Library{
+  constructor(){
+    this.booksLib=[];
+    this.users=[User];
+  }
 
+  addBook(book){
+     this.booksLib.push(book);
+  }
+}
 3. **Library Class:**
    - Attributes: `books` (an array of `Book` instances), `users` (an array of `User` instances).
    - Methods:

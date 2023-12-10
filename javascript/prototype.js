@@ -1,6 +1,7 @@
 // How to create objects in javascript
 // How object is represented in javascript
 // Object literal representation
+/*
 let a={name:"shubham",age:22,working:true}
 // every object in javascript can be represented in this form
 
@@ -150,7 +151,7 @@ const obj1=new Object();  // Object is a keyword
 
  }
 
- console.log(new C());
+ //console.log(new C());
 
  //[9,9,0]  [Htmlcollection] [<div>]
 
@@ -197,3 +198,38 @@ like adding new books, registering users, and checking books in and out.
 
   * 
   */
+
+
+// 5- Using Object.create();
+
+Object.prototype.name="God object";
+const grandfather=new Object();
+//grandfather.name="john";
+grandfather.assets="2 houses";
+
+console.log(grandfather);
+
+const father=Object.create(grandfather);
+//father.name="Shawn"
+father.assets="2 cars";
+
+console.log(father);
+
+const son=Object.create(father);
+//son.name="Henry"
+son.car="Ferrari"
+son.assets="ps5";
+
+
+console.log(son);
+
+
+// prototype chain
+
+// There are two kinds of properties one is direct property that belongs to object and one is prototype property
+
+// When you access any property firstly the javascript will look for the direct property
+// if it exists it prints it out 
+// other wise it will move above to the prototype chain
+console.log("Name",son.name);
+console.log("Assets",son.assets);// ?? 2 houses

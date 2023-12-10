@@ -17,10 +17,12 @@ const fg=()=>{
 }
 
 let arr=[1,2,3,4];
+let y=[]
 let ret=arr.forEach((ele,i)=>{
-
+    //y.push(2*ele);
     console.log(ele,i);
 
+    //return ele*2;  // return value is always ignored
 })
 
 console.log("Returned forach",ret);
@@ -50,6 +52,7 @@ let mp=arr.map(function(ele,index){
     //console.log("Map",ele,index);
     return ele*2;
 
+
 })
 console.log(mp);
 
@@ -65,5 +68,9 @@ let updatedArr=strArr.map((ele)=>{
     return ele.toLocaleUpperCase()
 })
 */
+// map function doesnt modifies the original array
+// it creates a shallow copy of the original array
+// shallow copy vs deep copy
 let updatedArr=strArr.map(ele=>ele.toLocaleUpperCase())
 console.log("updated arr",updatedArr);
+console.log("original arr",strArr);

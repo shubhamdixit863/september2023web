@@ -4,7 +4,7 @@
 //find ,sort ,includes ,indexOf
 // concat,some and every 
 // Object.keys and Object.values and Object.entries
-
+/*
 // forEach -->  Array.prototype
 // es5 function
 function foo(){
@@ -71,6 +71,94 @@ let updatedArr=strArr.map((ele)=>{
 // map function doesnt modifies the original array
 // it creates a shallow copy of the original array
 // shallow copy vs deep copy
+/*
 let updatedArr=strArr.map(ele=>ele.toLocaleUpperCase())
 console.log("updated arr",updatedArr);
 console.log("original arr",strArr);
+*/
+
+
+
+
+/// filter 
+
+let arr=[1,2,3,4,8,10];
+// we want to separate all the even numbers
+// [2,4,8,10];
+
+// push method is used to insert an element in the end inside the array 
+// [  ]
+
+let filtered=[];
+for(let i=0;i<arr.length;i++){
+    if(arr[i]%2==0){
+        filtered.push(arr[i])
+    }
+}
+
+console.log(filtered);
+
+// filter method returns a new array after applying the condition 
+// filter method will always return array which is equal  or less than the  length  of original array
+// original array is the array on which the filter method is applied
+// filtering always reqires some kind of condition to remove the elements
+const returnedArray=arr.filter(function(ele,i){  // i is index of an element in array
+    console.log(i);
+    if(ele%2==0){
+        return ele;
+    }
+})
+
+//console.log("After filtering",returnedArray);
+
+// remove the duplicates
+
+
+
+
+//The indexOf() method of Array instances returns the first index at 
+//which a given element can be found in the array, or -1 if it is not present.
+
+// let arr=[1,2,3,34]  arr.indexOf(34) --->3
+// arr.indexOf(99);  --> -1
+// X Dont use this method  to find out the duplicates
+/*
+const arrayDuplicates=[1,2,3,1,2,3,3,5,5,4,7,7,7,8]
+const duplicates=[];
+const ret=arrayDuplicates.filter((ele)=>{
+    if (duplicates.indexOf(ele)==-1){
+        duplicates.push(ele);
+    }
+    else{
+        return ele;
+    }
+})
+*/
+
+
+//slice and splice in js
+//slice -creates a new array containing a portion of existing array 
+let array=[1,2,3,7,8];
+
+// --->you are going from left to right then the indexes are 0,1,2,3,4
+// -->if you are going form right to left then the indexes start from -1 ,-2 ,-3,-4
+//array.slice(startindex,endIndex) ; // endIndex is not included
+let slc=array.slice(0,4); // it will give you all the elements with 0,1,2,3
+// it returns a  new array
+// it doesnt modidifies the original array
+console.log("sliced array",slc);
+console.log("sliced array2",array.slice(1,4));
+
+// you can also use negative indexes with slice last elements has index of -1
+console.log("negative index",array.slice(-3,-2))
+
+console.log("negative index",array.slice(-5,-1)) // output ? 8
+console.log("negative index",array.slice(-4,-2)) // 2,3
+console.log("negative index",array.slice(-4,2)) // 2
+// if you are omiiting the end index it will go all the way till length
+console.log("negative index",array.slice(-4)) // 2,3,7,8
+// this will return you the empty array because the absolute value of start index should always
+//be greater than the endindex
+console.log("negative index", array.slice(-1, -5));// []
+
+

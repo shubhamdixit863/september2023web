@@ -2,8 +2,8 @@
 // forEach ,map ,reduce ,filter 
 // split ,join ,push ,pop ,shift ,unshift
 //find ,sort ,includes ,indexOf
-// concat,some and every 
 // Object.keys and Object.values and Object.entries
+//some and every ,reduce
 /*
 // forEach -->  Array.prototype
 // es5 function
@@ -81,7 +81,7 @@ console.log("original arr",strArr);
 
 
 /// filter 
-
+/*
 let arr=[1,2,3,4,8,10];
 // we want to separate all the even numbers
 // [2,4,8,10];
@@ -135,7 +135,7 @@ const ret=arrayDuplicates.filter((ele)=>{
 })
 */
 
-
+/*
 //slice and splice in js
 //slice -creates a new array containing a portion of existing array 
 let array=[1,2,3,7,8];
@@ -160,5 +160,293 @@ console.log("negative index",array.slice(-4)) // 2,3,7,8
 // this will return you the empty array because the absolute value of start index should always
 //be greater than the endindex
 console.log("negative index", array.slice(-1, -5));// []
+
+**/
+
+/*
+
+const arr2=[1,2,3,4,5];
+const fil=arr2.map(function(ele,i){
+    return ele*2;
+
+})
+
+console.log("final array",fil);
+
+
+const stringArr=["a","b","c","d"];
+console.log(
+   
+    stringArr.map((ele)=>{
+        return ele.toLocaleUpperCase();
+    })
+
+)
+const words=["apple","applebee","cat","dog","anaconda"];
+
+console.log(
+
+    words.filter((ele)=>{
+        if(ele.startsWith("a")){
+            return ele;
+        }
+
+    })
+
+
+)
+
+// You have an array and you want to apply some operation or some logic or some modification on individual
+// items ,in that case use map function
+*/
+/*
+// splice 
+// const arr=[1,2,3,5] ; arr.splice(startIndex,deleteCount ,item1 ,item2 ,...)
+const arr=[2,3,4,5,6,7];
+const retArr=arr.splice(0,3);
+console.log("Returned",retArr);
+console.log("original arr",arr);
+
+// Purpose --change the contents of original array by removing the items
+// returns an array containing the deleted items
+const arr2=["a","b",1,2];
+const c=arr2.splice(-3,2);
+console.log("returned array",c); // [b,1]
+console.log("original array",arr2);// [a,2]
+
+const arr3=[78,9,7,1,2,3,4,8,9,10,77,12,67,89,98];
+const rety7=arr3.splice(-7,4);  ///  [9,10,77,12];
+console.log(arr3[3]);// undefined
+console.log(rety7);
+console.log(arr3);
+*/
+
+// ... when accompnied with array ,object or string or map or
+///Set can be considered as 
+//spread operator
+/*
+const d = [3, 4, 4, 6, 7];
+console.log(d);
+console.log(...d)
+
+// Creating a new array from existing using spread operator
+
+const f = [...d];
+console.log("f", f);
+
+// strings with spread opertaor
+
+function foo() {
+    return "hello world"
+}
+const st = "hey there ,how are you !";
+console.log(...st);
+
+//console.log(...foo());
+
+// Set is another datastructure in js which is used to store unique items
+// How to remove duplicates from an array using set
+const duplicate = [7, 7, 7, 8, 9, 0, 1]
+const set = new Set(duplicate);
+console.log("set", set);
+
+// I want an array with unique elements
+// in below line items of set will be unpacked and they would be stored in the 
+// array 
+const unique = [...set];
+console.log("Unique elements", unique);
+
+
+// spread operator with objects
+
+let obj = { name: "john", age: 23, city: "Delhi" }
+
+// you can copy the object in a new object using spread operator
+
+let c={...obj}; // copying (shallow copy)
+console.log(c);
+
+// we want to update some field of an object
+let d1={...c,city:"Mumbai"};
+// In objects every key should be unique 
+console.log(d1);
+*/
+/*
+let d1= { name: "john", age: 23, city: "Delhi" }
+let gh=d1;
+console.log(gh);
+gh.name="paul";
+console.log(gh);
+console.log(d1); // d1 object is also modified
+*/
+/*
+let d1= { name: "john", age: 23, city: "Delhi" }
+let gh={...d1}; // shallow copy
+console.log(gh);
+gh.name="santosh pandit";
+gh.age=90;
+console.log(gh);
+console.log(d1); // d1 object is also modified
+*/
+
+// rest operator is only applicable for functions
+// rest operator should be passed inside a function parameter
+/*
+function foo( g){
+  console.log(g);
+}
+
+foo(9,8,9);
+
+function bar(...santosh){  // rest operator
+    // all the arguments form rest operator are packed inside 
+    // an array ,when you call the function
+   console.log(santosh[0]);
+   for(let i=0;i<santosh.length;i++){
+    console.log(santosh[i]);
+   }
+}
+
+bar(8,9,0,0,0,0,8)
+// a rest parameter should be the last in parameter list
+function bar1(g,...santosh){  // rest operator
+    // all the arguments form rest operator are packed inside 
+    // an array ,when you call the function
+   console.log(santosh);
+   console.log(g);
+   
+}
+
+bar1("alpha",89,89,0,1)
+*/
+
+// split ,join ,push ,pop ,shift ,unshift
+
+// split actually splits a string in an array
+// it converts a string in an array
+/*
+let str="hello,people";
+let str2="he-llo-people";
+
+console.log(str.split(","))
+console.log(str.split(""))
+console.log(str2.split("-"));
+*/
+
+
+// join method is used to convert an array into string 
+/*
+const arr=["hey","there","how","are","you"];
+console.log(arr.join(","))  // this will return joined by ,
+
+
+*/
+
+//push ,pop  (from the end of an array )  from the right side
+// push inserts an item at the end of an array 
+/*
+let c=[];
+c.push(9);
+console.log(c);
+c.push(91);
+console.log(c);
+
+// pop removes the item from the end of an array
+c.pop();
+console.log(c);
+
+c.pop();
+console.log(c);
+*/
+
+
+//,shift ,unshift (from the beginning of an array)  // from the left side
+
+// unshift inserts the item in the beginning of an array 
+/*
+let ck=[];
+ck.unshift(90);
+console.log(ck);
+ck.unshift(7);
+console.log(ck);
+ck.unshift(167);
+console.log(ck);
+
+// shift removes the item from beginning of an array 
+console.log(ck)
+ck.shift();
+console.log(ck)
+*/
+
+
+
+// How you can remove an item from middle of an array
+/*
+let c=[4,5,6,7,1,9,8]
+let removed=c.splice(3,1);
+
+console.log(c);
+*/
+// removing second last
+/*
+let c=[4,5,6,7,1,9,8]
+let removed=c.splice(c.length-2,1);
+
+console.log(c);
+*/
+
+// find is very similar to filter ,filter returns an array but find returns
+// one item (first item)
+/*
+let c=[1,2,3,4]
+console.log(
+     c.find(function(ele){
+         if(ele%2==0){
+            return ele;
+         }
+     })
+
+)
+*/
+
+
+//includes just like indexOf checks for the existence of an item in an array 
+// but include returns true or false
+/*
+let arr=[1,2,3,4];
+
+console.log(arr.includes(4));
+console.log(arr.includes(40));
+
+console.log(arr.indexOf(4));
+console.log(arr.indexOf(40));
+*/
+/*
+
+// Object.keys and Object.values and Object.entries
+// All these methods return an array 
+let obj={name:"shubham",city:"Delhi",work:"mentor"}
+// Object.keys gives you an array of all the keys inside the object
+console.log(Object.keys(obj));
+// Object.values gives you an array of all the values inside the object
+
+console.log(Object.values(obj));
+// object.entries gives you array of both key and values
+console.log(Object.entries(obj));
+*/
+
+// used to combine two arrays
+// concat,
+
+let arr1=[1,2,3];
+let arr2=[4,5,6,7,8];
+let arr3=[9,10,11,12,13]
+
+console.log(arr1.concat(arr2));
+
+console.log(arr2.concat(arr1,arr3));
+
+let joined=[...arr1,...arr2];
+console.log(joined);
 
 

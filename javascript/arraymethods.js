@@ -466,7 +466,7 @@ You are given an array of objects representing various people, each with propert
 **Input Array:**
 ```javascript
 [
-  { name: "Alice", age: 25, country: "USA" },
+  { name: "Alice", age: 25, country: "USA"},
   { name: "Bob", age: 17, country: "Canada" },
   { name: "Carlos", age: 32, country: "Mexico" },
   { name: "Diana", age: 15, country: "USA" },
@@ -486,3 +486,38 @@ You are given an array of objects representing various people, each with propert
 
  * 
  */
+
+/**
+ * Write a JavaScript function that takes an object as an 
+ * input and returns a new object where the keys are the original keys in uppercase. 
+ * Use Object.keys and the map method.
+ * 
+ * Given an object with different properties, write a function that filters out properties whose values are not strings. 
+ * Use Object.values along with the filter method.
+ * 
+ * 
+ * Create a function that takes an object and returns an array of entries, where each entry is [key, value] but the value is doubled if it is a number.
+ *  Use Object.entries and map.
+ * 
+ * How would you merge two JavaScript objects, obj1 and obj2, so that the properties from obj2 overwrite those in obj1 if they exist in both objects?
+ *  Demonstrate this using the spread operator.
+ * 
+ * Consider an object where some properties are themselves objects. Write a function that flattens this object to a single depth, keeping the nested property keys separated by a dot.
+ *  Use Object.keys and recursion.
+ * 
+ * Create a function that takes an object and returns a new object where all numeric values are increased by 10, but non-numeric values are left unchanged. 
+ * Use Object.entries, filter, and map.
+ */
+
+//2341
+//3412
+//4123
+//1234
+
+const arr=[1,2,3,4];
+
+for (let i=0;i<4;i++){
+    arr.push(arr.shift());
+}
+
+console.log("final output --",arr);

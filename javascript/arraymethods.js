@@ -495,7 +495,6 @@ You are given an array of objects representing various people, each with propert
  * Given an object with different properties, write a function that filters out properties whose values are not strings. 
  * Use Object.values along with the filter method.
  * 
- * 
  * Create a function that takes an object and returns an array of entries, where each entry is [key, value] but the value is doubled if it is a number.
  *  Use Object.entries and map.
  * 
@@ -513,7 +512,7 @@ You are given an array of objects representing various people, each with propert
 //3412
 //4123
 //1234
-
+/*
 const arr=[1,2,3,4];
 
 for (let i=0;i<4;i++){
@@ -521,3 +520,101 @@ for (let i=0;i<4;i++){
 }
 
 console.log("final output --",arr);
+
+// To convert the first letter of each string to Uppercase
+
+let stringArray=["apple","banana","cat","dog"]
+console.log(
+
+    stringArray.map(ele=>{
+      let upperCaseFirstLetter=  ele.charAt(0).toLocaleUpperCase();
+      // We will split the string
+      let strSplit=ele.split("");
+      console.log(strSplit);
+      strSplit[0]=upperCaseFirstLetter;
+      // we will join the array
+
+      return strSplit.join("");
+
+
+    })
+
+)
+
+
+console.log(
+    stringArray.map(ele=>{
+      return ele.charAt(0).toLocaleUpperCase()+ele.slice(1);
+    })
+)
+*/
+
+
+// Given an object with different properties, write a function that filters out properties whose values are not strings. 
+ //* Use Object.values along with the filter method.
+
+ let obj={name:"shubham",age:21,city:"delhi",zip:208027}
+
+ function filterOut(obj){
+    const c=Object.values(obj); // ["shubham",21,"delhi",208027]
+
+    return c.filter(ele=>{
+        if(typeof ele =="string"){
+            return ele;
+        }
+    })
+
+ }
+
+ //console.log(filterOut(obj));
+
+
+ /**
+  * Write a JavaScript function that takes an object as an 
+ * input and returns a new object where the keys are the original keys in uppercase. 
+ * Use Object.keys and the map method.
+  */
+/*
+ function NewObject(obj){
+
+    const keys=Object.keys(obj);  //array of keys
+
+    let uppercaseKeys=keys.map(ele=>{
+        return ele.toLocaleUpperCase();
+    })
+
+
+    let newObj={};
+
+    for(let i=0;i<uppercaseKeys.length;i++){
+        newObj[uppercaseKeys[i]]=obj[uppercaseKeys[i].toLocaleLowerCase()]
+    }
+
+  return newObj;
+
+ }
+
+ //console.log(NewObject({name:"john",age:21,city:"delhi"}))
+
+ //let h={name:"sagar"}
+ //console.log(h["name"])
+ */
+
+/*
+let k="Md Shamim Akhter";
+console.log(
+    k.split(" ").map(ele=>{
+        return ele.charAt(0)
+    }).join("")
+)
+
+let strArr=["name","age","city"]
+let val=["shubh",22,"kanpur"];
+let obj4={};
+for(let i=0;i<strArr.length;i++){
+    obj4[strArr[i]]=val[i];
+}
+console.log(obj4);
+*/
+
+//1 -One

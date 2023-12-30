@@ -121,3 +121,31 @@ return promise;
   }).catch(err=>{
     console.log(err);
   })
+
+
+  function ExamPromise(marks){
+    return new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+        if(marks>90){
+          // getting a playstattion
+          resolve("Got a playstations")
+        }
+        else{
+          // getting punished
+          reject("punished")
+        }
+    
+      },5000)
+
+    })
+
+  }
+
+  ExamPromise(89)
+  .then(result=>{
+    console.log(result);
+
+  })
+  .catch(err=>{
+    console.log(err);
+  })

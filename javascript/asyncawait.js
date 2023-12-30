@@ -259,7 +259,9 @@ function DbOperationPromise(universityId,cb){
             if(student){
                 resolve(student)
             }else{
-                reject(new Error("student not found"))
+                reject({
+                    resposnse:404
+                })
     
             }
            
@@ -284,12 +286,12 @@ return promise;
   async function GetData(){
 
     try{
-      let data=  await DbOperationPromise(675569);
+        const t0 = performance.now();
+        let data=  await DbOperationPromise(675569);const t1 = performance.now();
+console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
       console.log("Data for async await",data);
-
     }catch(err){
-        console.log(err);
+        console.log(err.resposnse);
     }
-
   }
   GetData();

@@ -141,11 +141,80 @@ return promise;
 
   }
 
-  ExamPromise(89)
-  .then(result=>{
+  /*
+class Promise{
+  constructor(cb){
+
+  }
+   then(cb){
+
+   }
+   
+   catch(cb){
+
+   }
+}
+
+const promis=new Promise((res,reject)=>{
+
+});
+
+promis.then(()=>{
+
+}).catch((err)=>{
+
+})
+*/
+const pr=ExamPromise(89);
+
+  
+ExamPromise(89).then((result)=>{
     console.log(result);
 
   })
   .catch(err=>{
     console.log(err);
   })
+
+
+//  es7 ---standard -- async await came into picture
+
+// async is a keyword that is used with a function 
+// and an async function always returns a promise
+async function foo(){
+  return 9;
+}
+
+
+ function foo1(){
+  return 9;
+}
+console.log("Function foo called",foo());
+console.log("Function foo called",foo1());
+
+
+foo().then(Data=>{
+  console.log("promise here",Data);
+}).catch(Err=>{
+  console.log(Err)
+})
+
+
+// await is a keyword it is used to get the resolved value of a promise
+
+async function bar(){
+  try{
+    let data=await foo();
+    console.log(data);
+      
+  console.log("Async function bar",data);
+  }
+  catch(err){
+    console.log(err);
+  }
+ 
+
+}
+
+bar();
+

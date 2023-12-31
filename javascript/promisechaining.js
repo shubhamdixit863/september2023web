@@ -266,7 +266,6 @@ function extractName(obj){
    console.log("name here",name);
    const upp=await toUpperCase(name)
    console.log(name);
-
   }
 
   GetData()

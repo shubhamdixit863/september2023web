@@ -1,5 +1,3 @@
-// I have a operation /task here 
-// task is to get the student record from a database  as per its universityId if the record is not found throw error
 
 const Database=[
     {
@@ -188,66 +186,6 @@ const Database=[
     }
   ]
 
-  // internally  it will happend
-  /*
-
-  cb=function(err,studentData){
-    if(err!=null){
-        console.log(err)
-    }
-    else{
-        studentSome=studentData
-        console.log(studentData);
-    }
-
-}
-
-cb(null,{
-    "name": "Fulton Hopkins",
-    "email": "fultonhopkins@macronaut.com",
-    "username": "fultonhopkins@macronaut.com",
-    "password": "Croom",
-    "image": "Delwood",
-    "universityId": 317993
-  })
-  */
-  function DbOperation(universityId,cb){
-    // I will get the student based on the univrsity Id
-    setTimeout(() => {
-        let student=Database.find(ele=>{
-            return ele.universityId==universityId
-        })
-
-        if(student){
-            cb(null,student)
-        }else{
-            cb(new Error("student not found"),null)
-
-        }
-       
-    }, 3000);
-    // in a function if we dnt have anything in return the undefined  is returned
-
-  }
-  let studentSome="i am student";
-DbOperation(317993,function(err,studentData){
-    if(err!=null){
-        console.log(err)
-    }
-    else{
-        studentSome=studentData
-        console.log(studentData);
-    }
-
-})
-
-console.log(studentSome);  // output ??? 
-
-
-
-// Promise based 
-
-
 function DbOperationPromise(universityId,cb){
  
     const promise=new Promise((resolve,reject)=>{
@@ -273,25 +211,37 @@ function DbOperationPromise(universityId,cb){
 return promise;
   }
 
- 
-  DbOperationPromise(675569).then(data=>{
-    console.log("promise",data);
-  }).catch(err=>{
-    console.log(err);
-  })
-
-
-  // async await
-
-  async function GetData(){
-    try{
-        const t0 = performance.now();
-        let data=  await DbOperationPromise(675569);
-        const t1 = performance.now();
-console.log(`Call to doSomething took ${t1 - t0} milliseconds.`);
-      console.log("Data for async await",data);
-    }catch(err){
-        console.log(err.resposnse);
-    }
+  function isVowel(word){
+    let vowelsArray=["A","E","I","O","U"];
+    return vowelsArray.includes(word);
   }
-  GetData();
+
+  DbOperationPromise(949883)
+  .then(data=>{
+     let name=data.name;
+     return name;
+  })
+  .then(name=>{
+    console.log("Name",name.toUpperCase());
+    // sending the error
+    throw new Error("Uindentified name")
+    return name.toUpperCase()
+  })
+  .then(upper=>{
+    console.log(upper);
+    return upper.split("")
+  })
+  .then(array=>{
+    console.log(array);
+    return array.filter(ele=>isVowel(ele));
+  }).then(data=>{
+    console.log(data);
+  })
+  .catch(err=>{
+    console.log(err);
+    return "everything good"
+  }).then(data=>{
+    console.log(data);
+  }).finally(ele=>{
+    console.log("all good an all done")
+  })

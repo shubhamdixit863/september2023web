@@ -216,16 +216,28 @@ return promise;
     return vowelsArray.includes(word);
   }
 
+function toUpperCase(name){
+    console.log("here",name);
+     return new Promise((resolve,reject)=>{
+       resolve( name.toUpperCase())
+     })
+}
+
+function extractName(obj){
+    console.log(obj.name);
+    return new Promise((resolve,reject)=>{
+        resolve( obj.name)
+      })
+
+}
   DbOperationPromise(949883)
   .then(data=>{
-     let name=data.name;
-     return name;
+   return extractName(data);
   })
   .then(name=>{
-    console.log("Name",name.toUpperCase());
     // sending the error
-    throw new Error("Uindentified name")
-    return name.toUpperCase()
+    //throw new Error("Uindentified name")
+    return  toUpperCase(name)
   })
   .then(upper=>{
     console.log(upper);
@@ -245,3 +257,16 @@ return promise;
   }).finally(ele=>{
     console.log("all good an all done")
   })
+
+
+  async function GetData(){
+    console.log("Async await being called");
+    const obj=await   DbOperationPromise(949883);
+   const name= await extractName(obj)
+   console.log("name here",name);
+   const upp=await toUpperCase(name)
+   console.log(name);
+
+  }
+
+  GetData()

@@ -4,10 +4,6 @@ let a =9;
 let b=8;
 console.log("hello there");
 
-
-
-
-
 }
 
 
@@ -19,6 +15,8 @@ console.log("hello there");
 // that is possible because of closures
 // closure is the combination of functions inner scope (I)
 // and the functions lexical scope (L);
+
+// function execution finishes when return keyword in encountered
 function bar(){
     // L
     let y=9;
@@ -31,3 +29,40 @@ function bar(){
 
 const f=bar();
 f();
+
+
+// IIFE --Immediately invoked function expression
+// self executing function
+/*
+(function(param){
+
+})(argument);
+*/
+
+
+for(var i=0;i<10;i++){
+
+    setTimeout(()=>{
+      console.log(i);
+      console.log("");
+    },1000)
+}
+
+for(var i=0;i<10;i++){
+    // closures example
+    (function(param){
+        setTimeout(()=>{
+            console.log("IIFE",param);
+           // console.log("");
+          },1000)
+    })(i);
+}
+
+
+for(let i=0;i<10;i++){
+
+    setTimeout(()=>{
+      console.log("with let",i);
+      console.log("");
+    },1000)
+}

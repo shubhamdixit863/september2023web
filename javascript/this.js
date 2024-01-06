@@ -69,10 +69,21 @@ function data(arg1,arg2){
 
 
 data();
-
+var name="nagesh";
 let ob={
-    data:"something"
+    data:"something",
+    home:"hi",
+    name:"",
+    c:{
+        name:"",
+        k:"hello people",
+        fg:function(){
+            console.log(this.k);
+        }
+
+    }
 }
+ob.c.fg();
 
 // so if we want to bind the function to the obj ob such that
 // the value of this inside data function becomes ob

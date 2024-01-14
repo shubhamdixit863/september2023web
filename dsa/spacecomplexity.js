@@ -94,3 +94,5 @@ function foo2(n){
 } 
 
 foo2(8888)
+
+// f(n)=2n2+3n+6;

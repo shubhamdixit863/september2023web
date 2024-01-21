@@ -1,30 +1,38 @@
 function merge(arr1,arr2){
-    // arr1 and arr2 are sorted 
-    // now you have to determine an algorithm to merge this sorted array
+  // arr1 and arr2 both are sorted
 
-    let results=[];
-    let i=0;
-    let j=0;
-    //[1,2,7]  [5,6,8,9]
+  let i=0;
+  let j=0;
+  let results=[];
+  while(i<arr1.length && j<arr2.length){
+      if(arr2[j]>arr1[i]){
+        results.push(arr1[i]);
+        i++;
+      }else{
+        results.push(arr2[j]);
+        j++;
+      }
+    
+  }
 
-    while(i<arr1.length && j<arr2.length){
-             if(arr2[j]>arr1[i]){
-                results.push(arr1[i])
-                i++
-                
-
-             }else{
-                results.push(arr2[j])
-                j++
-             }
-
-             
+  if(i<arr1.length){
+    while(i<arr1.length){
+      results.push(arr1[i])
+      i++;
     }
+    
+  }
 
-    console.log(results);
+ else  if(j<arr2.length){
+   while(j<arr2.length){
+     results.push(arr2[j])
+     j++;
+   }
+    
 
-    //[1,2,5,6,7]
+  }
 
+  return results;
 }
 
 merge([1,2,7],[5,6,8,9])
@@ -50,8 +58,34 @@ function mergeSort(arr){
 
     // we have to merge the arrays as well
 
-    merge(left,right);
-
-
+   return  merge(left,right);
 }
 
+
+// the complexity of division function is n*log(N);
+// O(nlogn)
+/**
+ * function sort(arr1,arr2){
+  for(let i=0;i<arr1.length;i++){
+    for(let j=0;j<arr2.length;j++){
+      if(arr1[i]>arr2[j]){
+        let temp=arr1[i]
+        arr1[i]=arr2[j]
+        arr2[j]=temp
+      }
+    }
+  }
+  return arr1.concat(arr2)
+ 
+ 
+  
+}
+let arr1=[1,8,6]
+let arr2=[2,5,3]
+ 
+console.log(sort(arr1,arr2))
+ * 
+ * 
+ */
+
+console.log("the sorted array with merge sort",mergeSort([2,1,78,12,3,5,0]))

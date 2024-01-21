@@ -88,4 +88,4 @@ console.log(sort(arr1,arr2))
  * 
  */
 
-console.log("the sorted array with merge sort",mergeSort([2,1,78,12,3,5,0]))
+console.log("the sorted array with merge sort",mergeSort([1,2,0,3,0,9,0,5,0]))

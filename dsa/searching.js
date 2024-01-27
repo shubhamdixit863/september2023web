@@ -44,7 +44,7 @@ function BinarySearch(arr,ele){
 return -1
 }
 
-console.log(BinarySearch(arr2,3))
+//console.log(BinarySearch(arr2,3))
 
 
 //log2(n);// how many times you gonna  multiply 1/2  by itself such that it becomes 1/n
@@ -52,3 +52,31 @@ console.log(BinarySearch(arr2,3))
 
 // 1/n = 1/2*1/2*1/2*1/2*1/2
 //1/n= (1/2)^n
+
+
+// binary search with recursion
+
+
+function BinarySearchWithRecursion(arr,start,end,ele){
+
+    // we dnt have a base case 
+    if (start<=end){
+
+   
+    let mid=Math.floor((start+end)/2);
+    if (ele>arr[mid]){
+        start=mid+1;
+       return  BinarySearchWithRecursion(arr,start,end,ele)
+    }else if(ele<arr[mid]) {
+        end=mid-1;
+       return  BinarySearchWithRecursion(arr,start,end,ele)
+    } else if (ele==arr[mid]){
+        return mid;
+    }
+}
+    return -1;
+
+   
+}
+
+console.log(BinarySearchWithRecursion(arr2,0,arr2.length-1,3))

@@ -13,6 +13,8 @@ class LinkedList{
     constructor(){
         this.head=null;
         this.tail=null;
+        this.length=0;
+
     }
 
     push(data){
@@ -28,9 +30,32 @@ class LinkedList{
             this.tail.next=node;
             this.tail=node;
         }
+        this.length++;
 
     }
 
+
+pop(){
+    // pop removes the item as well 
+    // and it will assign a new tail
+    // we will check whether the linked list is empty or not 
+    if(this.head==null){
+        return null
+    }
+    
+    let current=this.head;
+    let newTail=null;
+    while(current.next!=null){
+        newTail=current;
+        current=current.next;
+    }
+    this.tail=newTail;
+    this.tail.next=null;
+    this.length--;
+    return current;
+
+
+}
 
 
 
@@ -42,7 +67,15 @@ class LinkedList{
 const ll=new LinkedList();
 ll.push(2);
 ll.push(3);
-console.log(ll);
 
 ll.push(19);
-console.log(JSON.stringify(ll));
+console.log(ll);
+
+console.log(ll.pop());
+console.log(ll);
+console.log(ll.pop());
+console.log(ll);
+
+//console.log(ll.pop());
+//console.log(ll);
+
